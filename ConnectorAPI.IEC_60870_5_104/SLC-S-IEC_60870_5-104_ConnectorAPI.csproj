@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <RootNamespace>Skyline.DataMiner.ConnectorAPI.IEC_60870_5_104</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+	<AssemblyName>Skyline.DataMiner.ConnectorAPI.IEC_60870_5_104</AssemblyName>
+	<PackageVersion>1.0.1</PackageVersion>
+	<Version>1.0.1</Version>
+    <Authors>SkylineCommunications</Authors>
+    <Company>Skyline Communications</Company>
+    <Description>This solution holds the connector API (Inter-App Calls and Messages) to communicate with any DataMiner element running the 'IEC 60870 5-104' connector.</Description>
+    <PackageTags>Skyline;DataMiner</PackageTags>
+    <PackageProjectUrl>https://skyline.be</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageIcon>Icon.png</PackageIcon>
+	<RepositoryUrl>https://github.com/SkylineCommunications/SLC-S-IEC_60870_5-104-ConnectorAPI.git</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Skyline.DataMiner.Core.InterAppCalls.Common" Version="1.1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="" />
+		<None Include="LICENSE.txt" Pack="true" PackagePath="" />
+		<None Include="nuget\Icon.png" Pack="true" PackagePath="" />
+	</ItemGroup>
+
+
+</Project>
