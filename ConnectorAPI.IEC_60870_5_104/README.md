@@ -20,4 +20,15 @@ A unique catalog of 7000+ connectors already exist. In addition, you can leverag
 At Skyline Communications, we deal in world-class solutions that are deployed by leading companies around the globe. Check out [our proven track record](https://aka.dataminer.services/about-skyline) and see how we make our customers' lives easier by empowering them to take their operations to the next level.
 
 <!-- Uncomment below and add more info to provide more information about how to use this package. -->
-<!-- ## Getting Started -->
+## Getting Started
+Here's a quick guide to help you get started with the ConnectorAPI IEC 60870 5-104 InterAppCalls NuGet package:
+
+
+Create an Iec608705104InterAppCalls object to get started.
+```csharp
+// For Automation Scripts
+var exampleElement = new Iec608705104InterAppCalls(engine.GetUserConnection(), agentId, elementId);
+
+// For Connectors
+var exampleElement = new Iec608705104InterAppCalls(protocol.SLNet.RawConnection, agentId, elementId);
+```
