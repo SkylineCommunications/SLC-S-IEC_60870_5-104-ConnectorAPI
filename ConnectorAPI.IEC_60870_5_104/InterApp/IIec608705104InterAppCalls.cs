@@ -42,5 +42,14 @@
 		/// <param name="timeout">The time the method needs to wait for a response.</param>
 		/// <returns>The response coming from the element</returns>
 		IInterAppResponse SendSingleResponseMessage(IInterAppRequest message, TimeSpan timeout = default);
+
+		/// <summary>
+		/// Sends the specified message to the element using InterApp and wait for the responses.
+		/// </summary>
+		/// <param name="message">The message that needs to be send.</param>
+		/// <param name="timeout">The time the method needs to wait for a response.</param>
+		/// <returns>The response coming from the device</returns>
+		/// <typeparam name="T">The type of the expected response, which must implement <see cref="IInterAppResponse"/>.</typeparam>
+		T SendSingleResponseMessage<T>(IInterAppRequest message, TimeSpan timeout = default) where T : IInterAppResponse;
 	}
 }

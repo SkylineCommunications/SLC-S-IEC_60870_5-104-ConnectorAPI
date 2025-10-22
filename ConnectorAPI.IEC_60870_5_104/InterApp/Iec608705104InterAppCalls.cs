@@ -151,5 +151,12 @@
 			var internalResult = myCommand.Send(SLNetConnection, AgentId, ElementId, Constants.InterAppReceiverPID, interAppCallTimeout, InterAppApi.KnownTypes).First();
 			return InterAppApi.FromMessage(internalResult);
 		}
+
+		/// <inheritdoc/>
+		public T SendSingleResponseMessage<T>(IInterAppRequest message, TimeSpan timeout = default) where T : IInterAppResponse
+		{
+			var result = SendSingleResponseMessage(message, timeout);
+			return (T)result;
+		}
 	}
 }
