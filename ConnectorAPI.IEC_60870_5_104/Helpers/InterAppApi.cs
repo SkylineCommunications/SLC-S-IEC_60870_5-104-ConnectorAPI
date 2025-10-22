@@ -31,7 +31,7 @@
 		/// A <see cref="Message"/> object that represents the specified <see cref="IInterAppRequest"/> message.
 		/// </returns>
 		/// <exception cref="InvalidOperationException">Thrown when the message type is unknown.</exception>
-		public static Message ToMessage(IInterAppRequest message)
+		internal static Message ToMessage(IInterAppRequest message)
 		{
 			switch (message)
 			{
@@ -51,7 +51,7 @@
 		/// An <see cref="IInterAppResponse"/> object that represents the data from the specified <see cref="Message"/>.
 		/// </returns>
 		/// <exception cref="InvalidOperationException">Thrown when the message type is unknown.</exception>
-		public static IInterAppResponse FromMessage(Message message)
+		internal static IInterAppResponse FromMessage(Message message)
 		{
 			switch (message)
 			{

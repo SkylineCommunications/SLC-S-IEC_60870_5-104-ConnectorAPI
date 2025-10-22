@@ -36,7 +36,7 @@
 		public string Service { get; set; }
 
 		/// <summary>
-		/// Gets or sets the UCA (Unified Control Architecture) identifier related to the device.
+		/// Gets or sets the UCA identifier related to the device.
 		/// </summary>
 		public string Uca { get; set; }
 
@@ -93,17 +93,17 @@
 		/// <summary>
 		/// Gets or sets the factor applied to the parameter.
 		/// </summary>
-		public object Factor { get; set; }
+		public double? Factor { get; set; }
 
 		/// <summary>
 		/// Gets or sets the CA (Common Address) value of the device.
 		/// </summary>
-		public double? Ca { get; set; }
+		public double CommonAddress { get; set; }
 
 		/// <summary>
 		/// Gets or sets the IOA (Information Object Address) associated with the device.
 		/// </summary>
-		public double? Ioa { get; set; }
+		public double InformationObjectAddress { get; set; }
 
 		/// <summary>
 		/// Gets or sets the unit of measurement for the parameter.
@@ -111,9 +111,9 @@
 		public string Units { get; set; }
 
 		/// <summary>
-		/// Gets or sets the writable IOA value if applicable.
+		/// Gets or sets the writable IOA (Information Object Address) value if applicable.
 		/// </summary>
-		public object IoaWr { get; set; }
+		public double? InformationObjectAddressWrite { get; set; }
 
 		/// <summary>
 		/// Gets or sets the name or location of the site where the device is installed.

@@ -18,8 +18,10 @@
 	{
 		private TimeSpan defaultTimeout = TimeSpan.FromMinutes(2);
 
-		/// <inheritdoc/>
-		public IConnection SLNetConnection { get; set; }
+		/// <summary>
+		/// The SLNet Connection to use.
+		/// </summary>
+		private readonly IConnection SLNetConnection;
 
 		/// <inheritdoc/>
 		public int AgentId { get; }
@@ -148,14 +150,6 @@
 			myCommand.Messages.AddMessage(InterAppApi.ToMessage(message));
 			var internalResult = myCommand.Send(SLNetConnection, AgentId, ElementId, Constants.InterAppReceiverPID, interAppCallTimeout, InterAppApi.KnownTypes).First();
 			return InterAppApi.FromMessage(internalResult);
-		}
-
-		/// <inheritdoc/>
-		public T SendSingleResponseMessage<T>(IInterAppRequest message, TimeSpan timeout = default)
-			where T : IInterAppResponse
-		{
-			var result = SendSingleResponseMessage(message, timeout);
-			return (T)result;
 		}
 	}
 }
