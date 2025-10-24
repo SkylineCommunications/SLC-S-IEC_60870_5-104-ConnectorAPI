@@ -12,11 +12,6 @@
 	public interface IIec608705104InterAppCalls
 	{
 		/// <summary>
-		/// The SLNet Connection to use.
-		/// </summary>
-		IConnection SLNetConnection { get; set; }
-
-		/// <summary>
 		/// The id of the DataMiner that is hosting the element.
 		/// </summary>
 		int AgentId { get; }
